@@ -14,7 +14,7 @@ def long_description():
 
 setup(
 	name="DHpyutils",
-	version="0.0.2",
+	version="0.0.8",
 	long_description=long_description(),
 	url="https://github.com/skdkfk8758/C-PyUtils.git",
 	author="CarpDm",

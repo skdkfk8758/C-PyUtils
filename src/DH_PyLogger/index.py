@@ -1,7 +1,18 @@
+from datetime import datetime
 
-class Logger:
+
+class Log:
+
+	def __init__(self, *args):
+		self.now = datetime.now()
 
 	@classmethod
-	def e(cls):
-		print("hello world 2222222")
-		return "123123123"
+	def d(cls, *message: any):
+		print("\n")
+		print("-" * 50, "DEBUG START", "-" * 47)
+		print(f"DateTime : {cls().now} \n")
+		for msg in message:
+			print(msg)
+		print("-" * 50, " DEBUG END", "-" * 48)
+		print("\n")
+
