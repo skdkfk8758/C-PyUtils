@@ -1,12 +1,21 @@
-from asyncore import read
+import io
 from glob import glob
 from os.path import basename, splitext
+
 from setuptools import find_packages, setup
 
+
+# Read in the README for the long description on PyPI
+def long_description():
+	with io.open('README.md', 'r', encoding='utf-8') as f:
+		readme = f.read()
+	return readme
+
+
 setup(
-	name="C-PyUtils",
-	version="0.0.1",
-	description="Carpdm Python Utils",
+	name="DHpyutils",
+	version="0.0.8",
+	long_description=long_description(),
 	url="https://github.com/skdkfk8758/C-PyUtils.git",
 	author="CarpDm",
 	author_email="skdkfk8758@gmail.com",
